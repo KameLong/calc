@@ -1,0 +1,49 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import java.net.URL?>
+<?import com.jfoenix.controls.JFXButton ?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1">
+    <stylesheets>
+        <URL value="@/css/application.css"/>
+    </stylesheets>
+    <padding>
+        <Insets top="30" right="30" bottom="30" left="30"/>
+    </padding>
+
+    <GridPane alignment="center" hgap="5" vgap="5">
+        <HBox alignment="top_right" styleClass='result'
+              GridPane.rowIndex="0"
+              GridPane.columnIndex="0"
+              GridPane.columnSpan="4">
+            <Label fx:id="count" style="-fx-text-fill: white"/>
+        </HBox>
+
+        <JFXButton GridPane.columnIndex="0" GridPane.rowIndex="1" text="C"   onAction="#onClearClick"     styleClass="symbol"/>
+        <JFXButton GridPane.columnIndex="1" GridPane.rowIndex="1" text="+/-" styleClass="symbol"/>
+        <JFXButton GridPane.columnIndex="2" GridPane.rowIndex="1" text="％"  styleClass="symbol"/>
+        <JFXButton GridPane.columnIndex="3" GridPane.rowIndex="1" text="÷"   onAction="#onOperationClick" styleClass="symbol"/>
+
+        <JFXButton GridPane.columnIndex="0" GridPane.rowIndex="2" text="7" onAction="#onNumberClick"     styleClass="number"/>
+        <JFXButton GridPane.columnIndex="1" GridPane.rowIndex="2" text="8" onAction="#onNumberClick"     styleClass="number"/>
+        <JFXButton GridPane.columnIndex="2" GridPane.rowIndex="2" text="9" onAction="#onNumberClick"     styleClass="number"/>
+        <JFXButton GridPane.columnIndex="3" GridPane.rowIndex="2" text="x" onAction="#onOperationClick"  styleClass="symbol"/>
+
+        <JFXButton GridPane.columnIndex="0" GridPane.rowIndex="3" text="4" onAction="#onNumberClick"      styleClass="number"/>
+        <JFXButton GridPane.columnIndex="1" GridPane.rowIndex="3" text="5" onAction="#onNumberClick"      styleClass="number"/>
+        <JFXButton GridPane.columnIndex="2" GridPane.rowIndex="3" text="6" onAction="#onNumberClick"      styleClass="number"/>
+        <JFXButton GridPane.columnIndex="3" GridPane.rowIndex="3" text="-" onAction="#onOperationClick"   styleClass="symbol"/>
+
+        <JFXButton GridPane.columnIndex="0" GridPane.rowIndex="4" text="1" onAction="#onNumberClick"      styleClass="number"/>
+        <JFXButton GridPane.columnIndex="1" GridPane.rowIndex="4" text="2" onAction="#onNumberClick"      styleClass="number"/>
+        <JFXButton GridPane.columnIndex="2" GridPane.rowIndex="4" text="3" onAction="#onNumberClick"      styleClass="number"/>
+        <JFXButton GridPane.columnIndex="3" GridPane.rowIndex="4" text="+" onAction="#onOperationClick"   styleClass="symbol"/>
+
+        <JFXButton GridPane.columnIndex="0" GridPane.rowIndex="5" text="0" onAction="#onNumberClick"    styleClass="number"/>
+        <JFXButton GridPane.columnIndex="2" GridPane.rowIndex="5" text="." styleClass="symbol"/>
+        <JFXButton GridPane.columnIndex="3" GridPane.rowIndex="5" text="=" onAction="#onCalculateClick" styleClass="symbol"/>
+    </GridPane>
+</VBox>
